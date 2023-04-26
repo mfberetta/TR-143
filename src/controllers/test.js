@@ -1,5 +1,5 @@
 export default {
-  upload: async (req, res,next) => {
-    
+  upload: (req, res) => {
+    res.send('Data Received')
   }
 }
