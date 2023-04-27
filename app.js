@@ -10,7 +10,7 @@ dotenv.config()
 /*-----------------------------------------------------------*/
 //Router for TR Diagnostic
 import routerTest from './src/routes/test.js'
-app.use('/test143', routerTest)
+app.use('/test', routerTest)
 /*-----------------------------------------------------------*/
 //puesta en escucha del servidor
 const PORT = process.env.PORT || 8080
