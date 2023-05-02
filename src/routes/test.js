@@ -1,7 +1,4 @@
-import controllerTest from '../controllers/test.js'
-
-/*-----------------------------------------------------------*/
-import express from 'express'
+const express = require('express')
 const { Router } = express
 const routerTest = new Router()
 routerTest.use(express.urlencoded({ extended: true }))
@@ -9,6 +6,13 @@ routerTest.use(express.urlencoded({ extended: true }))
 routerTest.use('/download', express.static('public'))
 /*-----------------------------------------------------------*/
  
-routerTest.post('/upload', controllerTest.upload)
+routerTest.post('/upload', (req, res, next) => {
+    try{
+        res.send('Data Received')
+    }
+    catch (error){
+        next(error)
+    }
+})
 
-export default routerTest
+module.exports = routerTest

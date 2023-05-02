@@ -1,15 +1,15 @@
-//Configuraci general del servidor
-import express from 'express'
-import cors from 'cors'
+//Configuracion general del servidor
+const express = require('express')
+const cors = require('cors')
 const app = express()
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
-import dotenv from 'dotenv'
+const dotenv = require('dotenv')
 dotenv.config()
 /*-----------------------------------------------------------*/
 //Router for TR Diagnostic
-import routerTest from './src/routes/test.js'
+const routerTest = require('./src/routes/test.js')
 app.use('/test', routerTest)
 /*-----------------------------------------------------------*/
 //puesta en escucha del servidor
