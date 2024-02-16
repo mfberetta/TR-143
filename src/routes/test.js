@@ -8,7 +8,16 @@ routerTest.use('/download', express.static('public'))
  
 routerTest.post('/upload', (req, res, next) => {
     try{
-        res.send('Data Received')
+        res.send('Data Received post')
+    }
+    catch (error){
+        next(error)
+    }
+})
+
+routerTest.put('/upload', (req, res, next) => {
+    try{
+        res.send('Data Received put')
     }
     catch (error){
         next(error)

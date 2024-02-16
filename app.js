@@ -13,7 +13,7 @@ const routerTest = require('./src/routes/test.js')
 app.use('/test', routerTest)
 /*-----------------------------------------------------------*/
 //puesta en escucha del servidor
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 80
 const server = app.listen(PORT, () => {
     console.log(`Servidor escuchando en el puerto ${PORT}`)
 })
